@@ -39,7 +39,7 @@ function onCountry(countries) {
     if (countries.length > 2 && countries.length < 10) {
         const list = countries.map(({flags, name}) => {
             return `<li class="country-list__item"><img src="${flags.svg}" alt="" width="50" height="50"><h2>${name.official}</h2></li>`
-        })
+        }).join('');
        refs.countryList.innerHTML = list;
     }
 
@@ -52,7 +52,7 @@ function onCountry(countries) {
             <p>Population: ${population}</p>
             <p>Languages: ${Object.values(languages)}</p>
             </div>`
-      }).join('')
+      }).join('');
       refs.countryInfo.innerHTML = markup;  
    }
   
@@ -61,6 +61,5 @@ function onCountry(countries) {
 
 function onError(error) { 
     Notify.failure('Oops, there is no country with that name.');
-    return (refs.countryList.innerHTML = ''), (refs.countryInfo.innerHTML = ''); 
     
 }
