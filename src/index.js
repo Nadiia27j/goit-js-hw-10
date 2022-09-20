@@ -29,7 +29,7 @@ function onSearch(e) {
 }
 
 function onCountry(countries) {
-    // console.log(countries);
+    
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';
     if (countries.length > 10) {
@@ -59,7 +59,6 @@ function onCountry(countries) {
 }
     
 
-function onError(error) { 
-    Notify.failure('Oops, there is no country with that name.');
-    
+function onError() { 
+    Notify.failure('Oops, there is no country with that name.'); 
 }
