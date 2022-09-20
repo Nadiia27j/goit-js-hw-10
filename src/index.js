@@ -38,7 +38,7 @@ function onCountry(countries) {
 
     if (countries.length > 2 && countries.length < 10) {
         const list = countries.map(({flags, name}) => {
-            return `<li class="country-list__item"><img src="${flags.svg}" alt="" width="50" height="50"><h2>${name.official}</h2></li>`
+            return `<li class="country-list__item"><img src="${flags.svg}" alt="" width="50" height="50"><h2 class="country-list__title">${name.official}</h2></li>`
         }).join('');
        refs.countryList.innerHTML = list;
     }
